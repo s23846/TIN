@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+
+    <style>
+        label {
+            font-size: 20px;
+        }
+        label span {
+            color: green;
+        }
+        input, textarea, select {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: yellow;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ćwiczenie B</h1>
+
+    <form>
+        <label for="text">Pole tekstowe<span>*</span></label>
+        <input required id="text" name="text" type="text" />
+        <br />
+
+        <label for="password">Pole z hasłem<span>*</span></label>
+        <input required id="password" name="password" type="password" />
+        <br />
+
+        <label for="checkbox">Checkbox<span>*</span></label>
+        <input required id="checkbox" name="checkbox" type="checkbox" />
+        <br />
+
+
+        <label for="radio">Grupa radiobuttonów</label>
+        <input type="radio" id="CSS" name="radio" value="CSS">
+        <input type="radio" id="JavaScript" name="radio" value="JavaScript">
+        <br />
+
+        <label for="cars">Grupy opcji</label>
+        <select name="cars" id="cars">
+            <option value="volvo">Opca1</option>
+            <option value="saab">Opcja2</option>
+            <option value="mercedes">Opcja3</option>
+            <option value="audi">Opcja4</option>
+        </select>
+        <br />
+
+        <label for="textarea">Textaera</label>
+        <textarea id="textarea"></textarea>
+        <br />
+
+        <button type="reset">Reset</button>
+        <button>Submit</button>
+    </form>
+</body>
+</html>
