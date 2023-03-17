@@ -1,0 +1,32 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    margin: 0;
+    text-align: center;
+}
+h2 {
+    font-size: 18px;
+    margin: 0 0 8px 10px;
+    text-decoration: underline;
+}
+header {
+    border: 2px solid red;
+}
+a:hover {
+    color: blueviolet;
+}
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.content {
+    background-color: yellow;
+}
+.article-content {
+    margin: 0 40px;
+    border: 1px solid sienna;
+    background-color: green;
+}
