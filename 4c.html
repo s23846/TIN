@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Formularz z walidacją</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      function walidujFormularz(event) {
+        event.preventDefault(); 
+
+        var poleNumeryczne = document.getElementById("pole-numeryczne");
+        var poleTekstowe = document.getElementById("pole-tekstowe");
+        var liczba = poleNumeryczne.value;
+        var tekst = poleTekstowe.value;
+        var walidacja = true;
+
+        if (liczba === "" || isNaN(liczba)) {
+          alert("Proszę wprowadzić liczbę w polu numerycznym.");
+          walidacja = false;
+        }
+
+        if (tekst === "") {
+          alert("Proszę wypełnić pole tekstowe.");
+          walidacja = false;
+        }
+
+        console.log(walidacja)
+        return walidacja;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Formularz z walidacją</h1>
+    <form onsubmit="walidujFormularz(event)">
+      <label for="pole-numeryczne">Liczba:</label><br>
+      <input type="number" id="pole-numeryczne" name="pole-numeryczne" required><br>
+      <label for="pole-tekstowe">Tekst:</label><br>
+      <input type="text" id="pole-tekstowe" name="pole-tekstowe" required><br>
+      <button type="submit">Wyslij</button>
+    </form>
+  </body>
+</html>

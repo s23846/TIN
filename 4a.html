@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Konwerter temperatur</title>
+  </head>
+  <body>
+    <form>
+      <label>
+        Temperatura:
+        <input type="number" name="temperature" step="0.01">
+      </label>
+      <br>
+      <label>
+        Skala:
+        <select name="scale">
+          <option value="celsius">Celsjusza</option>
+          <option value="fahrenheit">Fahrenheita</option>
+        </select>
+      </label>
+      <br>
+      <button type="button" onclick="konwertuj()">Konwertuj</button>
+    </form>
+    <div id="wynik"></div>
+    
+    <script>
+      function konwertuj() {
+        const temperatura = parseFloat(document.querySelector('[name="temperature"]').value);
+        const skala = document.querySelector('[name="scale"]').value;
+        let wynik;
+        
+        if (skala === "celsius") {
+          wynik = temperatura * 1.8 + 32;
+          wynik = `${temperatura} stopni Celsjusza = ${wynik} stopni Fahrenheita`;
+        } else {
+          wynik = (temperatura - 32) / 1.8;
+          wynik = `${temperatura} stopni Fahrenheita = ${wynik} stopni Celsjusza`;
+        }
+        
+        document.getElementById("wynik").textContent = wynik;
+      }
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
